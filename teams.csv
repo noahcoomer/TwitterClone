@@ -1,0 +1,43 @@
+id,tricode,city,teamName,fullName,franchise,conference,division
+12326,AFR,Team,Africa,Team Africa,False,,
+12327,WLD,Team,World,Team World,False,,
+15019,ADL,Adelaide,36ers,Adelaide 36ers,False,Intl,
+1610612737,ATL,Atlanta,Hawks,Atlanta Hawks,True,East,Southeast
+15021,BJD,Beijing,Ducks,Beijing Ducks,False,Intl,
+1610612738,BOS,Boston,Celtics,Boston Celtics,True,East,Atlantic
+1610612751,BKN,Brooklyn,Nets,Brooklyn Nets,True,East,Atlantic
+1610612766,CHA,Charlotte,Hornets,Charlotte Hornets,True,East,Southeast
+1610612741,CHI,Chicago,Bulls,Chicago Bulls,True,East,Central
+1610612739,CLE,Cleveland,Cavaliers,Cleveland Cavaliers,True,East,Central
+1610612742,DAL,Dallas,Mavericks,Dallas Mavericks,True,West,Southwest
+1610612743,DEN,Denver,Nuggets,Denver Nuggets,True,West,Northwest
+1610612765,DET,Detroit,Pistons,Detroit Pistons,True,East,Central
+1610612744,GSW,Golden State,Warriors,Golden State Warriors,True,West,Pacific
+15018,GUA,Guangzhou,Long-Lions,Guangzhou Long-Lions,False,Intl,
+93,MAC,Haifa,Maccabi Haifa,Maccabi Haifa,False,Intl,
+1610612745,HOU,Houston,Rockets,Houston Rockets,True,West,Southwest
+1610612754,IND,Indiana,Pacers,Indiana Pacers,True,East,Central
+1610612746,LAC,LA,Clippers,LA Clippers,True,West,Pacific
+1610612747,LAL,Los Angeles,Lakers,Los Angeles Lakers,True,West,Pacific
+15016,MEL,Melbourne,United,Melbourne United,False,Intl,
+1610612763,MEM,Memphis,Grizzlies,Memphis Grizzlies,True,West,Southwest
+1610612748,MIA,Miami,Heat,Miami Heat,True,East,Southeast
+1610612749,MIL,Milwaukee,Bucks,Milwaukee Bucks,True,East,Central
+1610612750,MIN,Minnesota,Timberwolves,Minnesota Timberwolves,True,West,Northwest
+1610612740,NOP,New Orleans,Pelicans,New Orleans Pelicans,True,West,Southwest
+1610612752,NYK,New York,Knicks,New York Knicks,True,East,Atlantic
+15020,NZB,New Zealand,Breakers,New Zealand Breakers,False,Intl,
+1610612760,OKC,Oklahoma City,Thunder,Oklahoma City Thunder,True,West,Northwest
+1610612753,ORL,Orlando,Magic,Orlando Magic,True,East,Southeast
+104,PER,Perth,Wildcats,Perth Wildcats,False,Intl,
+1610612755,PHI,Philadelphia,76ers,Philadelphia 76ers,True,East,Atlantic
+1610612756,PHX,Phoenix,Suns,Phoenix Suns,True,West,Pacific
+1610612757,POR,Portland,Trail Blazers,Portland Trail Blazers,True,West,Northwest
+12325,FLA,Rio de Janeiro,Flamengo,Rio de Janeiro Flamengo,False,Intl,
+1610612758,SAC,Sacramento,Kings,Sacramento Kings,True,West,Pacific
+1610612759,SAS,San Antonio,Spurs,San Antonio Spurs,True,West,Southwest
+12329,SDS,Shanghai,Shanghai Sharks,Shanghai Sharks,False,Intl,
+15015,SYD,Sydney,Kings,Sydney Kings,False,Intl,
+1610612761,TOR,Toronto,Raptors,Toronto Raptors,True,East,Atlantic
+1610612762,UTA,Utah,Jazz,Utah Jazz,True,West,Northwest
+1610612764,WAS,Washington,Wizards,Washington Wizards,True,East,Southeast

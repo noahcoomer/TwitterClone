@@ -49,6 +49,22 @@ def write_teams(file, data):
     print("Finished writing data")
 
 
+def write_schedule(file, data):
+    print("Writing schedule data")
+    games = data['league']['standard']
+    file.write('id,url,startDate,type,homeTeam,homeScore,homeWins,homeLosses,awayTeam,awayScore,awayWins,awayLosses\n')
+    for game in games:
+        text = game['nugget']['text']
+        text = text.replace(',', ';')
+        # strip the text of commas
+        # add the tag so there are game distinctions
+        file.write(game['gameId'] + ',' + game['gameUrlCode'] + ',' + game['startDateEastern'] + ',' + text +
+                   ',' + game['hTeam']['teamId'] + ',' + game['hTeam']['score'] + ',' + game['hTeam']['win'] + ',' +
+                   game['hTeam']['loss'] + ',' + game['vTeam']['teamId'] + ',' + game['vTeam']['score'] + ',' +
+                   game['vTeam']['win'] + ',' + game['vTeam']['loss'] + '\n')
+    print("Finished writing data")
+
+
 ### form a dictionary with team id's as the keys and the full name as the values
 def form_teams_dict(team_reader):
     teams = {}
@@ -83,7 +99,7 @@ def players_transfer(db, cursor, row, teams):
 
     # form the email
     variation = False
-    email = fname + lname + '@gmail.com'
+    email = fname.lower() + '_' + lname.lower() + '@gmail.com'
     username = fname + lname + str(jersey)
 
     bio = "Hi, my name is " + fname + " " + lname + ". I play for the " + team + " in the " + position + " position."
@@ -105,28 +121,37 @@ def players_transfer(db, cursor, row, teams):
         return
 
 def main():
-    print()
     #player_url = 'http://data.nba.net/10s/prod/v1/2018/players.json'
     #team_url = 'http://data.nba.net/10s/prod/v2/2018/teams.json'
+    #schedule_url = 'http://data.nba.net/10s/prod/v1/2018/schedule.json'
     #data = connect(team_url)
+    #data = connect(schedule_url)
 
-    #file = open('teams.csv', 'w')
+    #file = open('csv/schedule.csv', 'w')
+    #write_schedule(file, data)
+    #file.close()
+
+    ### write the teams to a .csv file
+    #file = open('csv/teams.csv', 'w')
     #write_teams(file, data)
     #file.close()
 
-    #file = open('players.csv', 'w')
+    ### write the players to a .csv file
+    #file = open('csv/players.csv', 'w')
     #write_players(file, data)
     #file.close()
 
-    file = open('teams.csv', 'r')
+    ### create the teams dictionary
+    file = open('csv/teams.csv', 'r')
     team_reader = csv.DictReader(file)
     teams = form_teams_dict(team_reader)
     file.close()
 
+
+    ### transfer the players to the database
     db = pymysql.connect("localhost", "root", "britton11", "TwitterClone")
     cursor = db.cursor()
-
-    csvfile = open('players.csv', 'r')
+    csvfile = open('csv/players.csv', 'r')
     reader = csv.DictReader(csvfile)
     database_transfer(db, cursor, reader, teams)
     db.close()

@@ -14,29 +14,27 @@
 
 <html>
     <head>
-        <?php file_get_contents('./common/header.html'); ?>
+        <?php echo file_get_contents('common/header.html'); ?>
     </head>
     <body>
+        <?php $currentPage = 'users'; include('common/nav.php'); ?>
         <div class="container">
-            <h1>NBA Stats</h1>
-        </div>
-        <div>
-            <table>
+            <h1>Users</h1>
+            <table class="table table-bordered table-responsive-md table-striped">
                 <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Username</th>
-                    <th>Email</th>
-                    <th>Password</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Year Of Birth</th>
-                </tr>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Username</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Password</th>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Year Of Birth</th>
+                    </tr>
                 </thead>
-
                 <tbody>
                 <?php foreach ($users as $row) { ?>
-                    <tr>
+                    <tr scope="row">
                         <td><?php echo $row['id']; ?></td>
                         <td><?php echo $row['username']; ?></td>
                         <td><?php echo $row['email']; ?></td>
@@ -49,6 +47,6 @@
                 </tbody>
             </table>
         </div>
-        <?php file_get_contents('./common/footer.html'); ?>
+        <?php echo file_get_contents('common/footer.html'); ?>
     </body>
 </html>

@@ -16,11 +16,12 @@
     <head>
         <?php echo file_get_contents('common/header.html'); ?>
     </head>
-    <body>
+    <body class="bg-light">
         <?php $currentPage = 'users'; include('common/nav.php'); ?>
         <div class="container">
             <h1>Users</h1>
-            <table class="table table-bordered table-responsive-md table-striped">
+            <br>
+            <table class="table table-bordered table-responsive-md table-striped bg-white">
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
@@ -29,7 +30,8 @@
                         <th scope="col">Password</th>
                         <th scope="col">First Name</th>
                         <th scope="col">Last Name</th>
-                        <th scope="col">Year Of Birth</th>
+                        <th scope="col">YOB</th>
+                        <th scope="col"></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -42,6 +44,7 @@
                         <td><?php echo $row['fname']; ?></td>
                         <td><?php echo $row['lname']; ?></td>
                         <td><?php echo $row['yob']; ?></td>
+                        <td><button type="button" class="btn btn-primary btn-sm">Follow</button></td>
                     </tr>
                 <?php } ?>
                 </tbody>

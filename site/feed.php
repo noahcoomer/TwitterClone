@@ -14,7 +14,8 @@
     // Create an assoc array that has usernames associated to ids
 
     $tweets = [];
-    $sql = "SELECT * FROM Tweet";
+    $sql = "SELECT t.tweet_id, t.user_id, t.text, t.date_created, u.fname, u.lname 
+            FROM Tweet t INNER JOIN USER u ON t.user_id=u.id";
     $result = $db->query($sql);
     if ($result) {
         while ($row = $result->fetch_assoc()) {
@@ -23,19 +24,47 @@
             // Add the comments to a sub-assoc array for each tweet OR create another array of tweet ids and do this separately
         }
     }
-    $result->close();
 
-    $uids = array();
-    $name_sql = "SELECT id, fname, lname FROM User";
-    $name_result = $db->query($sql);
-    if ($name_result) {
-        while ($row = $name_result->fetch_assoc()) {
-            $str = (string) $row['id'];
-            echo $str;
-            $uids[$str] = $row['fname'] . ' ' . $row['lname'];
+    $comments = [];
+    foreach ($tweets as $tweet) {
+        $tweet_id = $tweet['tweet_id'];
+        $sql = "SELECT c.text, u.fname, u.lname FROM Comment c 
+                INNER JOIN User u ON c.user_id=u.id
+                WHERE c.tweet_id IN 
+                (SELECT t.tweet_id FROM Tweet t WHERE t.tweet_id=$tweet_id);";
+        $result = $db->query($sql);
+        if ($result) {
+            while ($row = $result->fetch_assoc()) {
+                if ($comments[$tweet_id]) {
+                    array_push($comments[$tweet_id], $row);
+                }
+                else {
+                    $comments[$tweet_id] = array();
+                    array_push($comments[$tweet_id], $row);
+                }
+            }
         }
     }
-    echo var_dump($uids);
+
+    $likes = [];
+    $sql = "SELECT tweet_id, user_id FROM Likes";
+    $result = $db->query($sql);
+    if ($result) {
+        while($row = $result->fetch_assoc()) {
+            $id = $row['tweet_id'];
+            if ($likes[$id]) {
+                $likes[$id] += 1;
+            }
+            else {
+                $likes[$id] = 1;
+            }
+        }
+    }
+
+
+    $result->close();
+    $db->close();
+
 ?>
 
 <html>
@@ -49,9 +78,32 @@
             <br>
             <?php foreach ($tweets as $tweet) { ?>
 
-                <div class="border border-secondary rounded bg-white" style="padding-left: .5em">
-                    <h2><?php echo $uids[(string)$tweet['user_id']]; ?></h2>
+                <div class="border border-secondary rounded bg-white feed-div shadow">
+                    <h2><?php echo $tweet['fname'] . ' ' . $tweet['lname']; ?></h2>
                     <p><?php echo $tweet['text']; ?></p>
+                    <hr>
+                    <div class="row">
+                        <div class="col-6">
+                            <button type="button" class="btn btn-primary"><?php echo $likes[$tweet['tweet_id']]; ?> Likes</button>
+                            <button type="button" class="btn btn-secondary"><?php echo count($comments[$tweet['tweet_id']]); ?> Comments</button>
+                        </div>
+                    </div>
+
+                    <?php $tweet_comments = $comments[$tweet['tweet_id']]; ?>
+                    <?php foreach ($tweet_comments as $tweet_comment) { ?>
+                        <br>
+                        <div class="border border-secondary rounded p-3">
+                            <h3><?php echo $tweet_comment['fname'] . ' ' . $tweet_comment['lname']; ?></h3>
+                            <p><?php echo $tweet_comment['text'] ?></p>
+                        </div>
+                    <?php } ?>
+                    <br>
+                    <form method="post" action="php/comment_manager.php">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="inputComment" aria-describedby="commentHelp" placeholder="Enter a comment...">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
                 </div>
                 <br>
             <?php } ?>

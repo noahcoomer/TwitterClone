@@ -17,3 +17,4 @@ function connectToSQLDatabase(){
 
     return $conn;
 }
+

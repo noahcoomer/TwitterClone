@@ -15,7 +15,14 @@
     <body class="text-center">
         <!-- This file should be used to ask the user if they want to use the Neo4j DB or the SQL DB -->
         <div class="container">
-
+            <div class="row p-6">
+                <div class="col-6">
+                    <button class="btn-lg btn-primary">SQL</button>
+                </div>
+                <div class="col-6">
+                    <button class="btn-lg btn-secondary">Neo4j</button>
+                </div>
+            </div>
         </div>
     </body>
 </html>

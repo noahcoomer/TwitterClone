@@ -6,10 +6,10 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link <?php if($currentPage =='feed'){echo 'active';}?>" href="./feed.php">Feed</a>
+                <a class="nav-link <?php if($currentPage =='feed'){echo 'active';}?>" href="./feed.php?uid=<?php echo $_GET['uid']; ?>">Feed</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <?php if($currentPage =='users'){echo 'active';}?>" href="./users.php">Users</a>
+                <a class="nav-link <?php if($currentPage =='users'){echo 'active';}?>" href="./users.php?uid=<?php echo $_GET['uid']; ?>">Users</a>
             </li>
         </ul>
     </div>

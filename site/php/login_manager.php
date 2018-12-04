@@ -19,8 +19,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $row = $result->fetch_assoc();
         if ($row['password'] == $input_pw) {
             // Here is where we would perform a password hash
-            $GLOBALS['uid'] = $row['id'];
-            header('Location: ../feed.php');
+            $uid = $row['id'];
+            header('Location: ../feed.php?uid=' . $uid);
         } else {
             echo "Invalid password. Please try again.";
         }

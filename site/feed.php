@@ -13,9 +13,26 @@
     // Select the users that the current user is following
     // Create an assoc array that has usernames associated to ids
 
+    $uid = $_GET['uid'];
+    $follows = [];
+    $sql = "SELECT following_id FROM Follows_User WHERE user_id=$uid";
+    $result = $db->query($sql);
+    if ($result) {
+        while ($row = $result->fetch_assoc()) {
+            array_push($follows, $row['following_id']);
+        }
+    }
+
+    $uids = '';
+    if (!empty($follows)) {
+        $uids = $follows[0];
+    }
+    for ($i = 1; $i < count($follows); $i += 1) {
+        $uids .= ', ' . $follows[$i];
+    }
     $tweets = [];
     $sql = "SELECT t.tweet_id, t.user_id, t.text, t.date_created, u.fname, u.lname 
-            FROM Tweet t INNER JOIN USER u ON t.user_id=u.id";
+            FROM Tweet t INNER JOIN USER u ON t.user_id=u.id WHERE u.id IN ($uids)";
     $result = $db->query($sql);
     if ($result) {
         while ($row = $result->fetch_assoc()) {
@@ -77,12 +94,12 @@
             <?php $currentPage = "feed"; include('common/nav.php'); ?>
             <?php if ($error = $_GET['error']) { ?>
                 <?php if ($error) { ?>
-                    <div class="alert alert-success" ?>
-
+                    <div class="alert alert-success">
+                        <p>Successfully performed action.</p>
                     </div>
                 <?php } else { ?>
-                    <div class="alert alert-danger" ?>
-
+                    <div class="alert alert-danger">
+                        <p>Encountered an error. Please try again.</p>
                     </div>
                 <?php } ?>
             <?php } ?>
@@ -96,7 +113,9 @@
                     <hr>
                     <div class="row">
                         <div class="col">
-                            <button type="button" class="btn btn-primary"><?php echo $likes[$tweet['tweet_id']]; ?> Likes</button>
+                            <a href="php/like_manager.php?uid=<?php echo $uid; ?>&tweet=<?php echo $tweet['tweet_id']; ?>">
+                                <button type="button" class="btn btn-primary"><?php echo $likes[$tweet['tweet_id']]; ?> Likes</button>
+                            </a>
                             <button type="button" class="btn btn-secondary"><?php echo count($comments[$tweet['tweet_id']]); ?> Comments</button>
                         </div>
                     </div>
@@ -111,7 +130,7 @@
                     <?php } ?>
 
                     <br>
-                    <form method="post" action="php/comment_manager.php">
+                    <form method="post" action="php/comment_manager.php?uid=<?php echo $uid; ?>&tweet=<?php echo $tweet['tweet_id']; ?>">
                         <div class="form-row">
                             <div class="col-11">
                                 <div class="form-group">

@@ -22,9 +22,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $sql = "SELECT id FROM User WHERE email='$email'";
         if ($result = $db->query($sql)) {
             $row = $result->fetch_assoc();
-            $GLOBALS['uid'] = $row['id'];
+            $uid = $row['id'];
             $db->close();
-            header('Location: ../feed.php');
+            header('Location: ../feed.php?uid=' . $uid);
         }
         else {
             $db->close();

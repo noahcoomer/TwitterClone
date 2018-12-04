@@ -2,18 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3a5681c-d5dc-4e95-93ed-a0104c498cd5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/neo4j_master.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site/php/comment_manager.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/er_diagram.mwb" beforeDir="false" afterPath="$PROJECT_DIR$/docs/er_diagram.mwb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/er_diagram_png.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/assets/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/site/assets/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/db/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/site/db/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/db_populator.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/db_populator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/nba_poller.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/nba_poller.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/site/feed.php" beforeDir="false" afterPath="$PROJECT_DIR$/site/feed.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/site/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/site/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/site/php/login_manager.php" beforeDir="false" afterPath="$PROJECT_DIR$/site/php/login_manager.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/site/php/register_manager.php" beforeDir="false" afterPath="$PROJECT_DIR$/site/php/register_manager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/site/register.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,12 +21,14 @@
     <session id="-550527069">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="8" />
+          <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.20" value="2" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.open.time.23" value="1" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -38,17 +36,18 @@
           <entry key="css" value="211" />
           <entry key="dummy" value="3" />
           <entry key="html" value="163" />
-          <entry key="php" value="7399" />
-          <entry key="py" value="4774" />
+          <entry key="php" value="8224" />
+          <entry key="py" value="6712" />
+          <entry key="txt" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="211" />
           <entry key="HTML" value="163" />
-          <entry key="PHP" value="7380" />
-          <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="4774" />
+          <entry key="PHP" value="8205" />
+          <entry key="PLAIN_TEXT" value="5" />
+          <entry key="Python" value="6712" />
           <entry key="SQL" value="19" />
         </counts>
       </usages-collector>
@@ -57,9 +56,10 @@
           <entry key="css" value="5" />
           <entry key="html" value="3" />
           <entry key="js" value="2" />
-          <entry key="php" value="15" />
+          <entry key="php" value="16" />
           <entry key="png" value="3" />
-          <entry key="py" value="8" />
+          <entry key="py" value="9" />
+          <entry key="txt" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -68,8 +68,9 @@
           <entry key="HTML" value="3" />
           <entry key="Image" value="3" />
           <entry key="JavaScript" value="2" />
-          <entry key="PHP" value="15" />
-          <entry key="Python" value="8" />
+          <entry key="PHP" value="16" />
+          <entry key="PLAIN_TEXT" value="6" />
+          <entry key="Python" value="9" />
         </counts>
       </usages-collector>
     </session>
@@ -77,63 +78,71 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/site/login.php">
+        <entry file="file://$PROJECT_DIR$/python/db_populator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="29" column="52" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/site/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+            <state relative-caret-position="472">
+              <caret line="155" column="2" lean-forward="true" selection-start-line="155" selection-start-column="2" selection-end-line="155" selection-end-column="2" />
               <folding>
-                <element signature="e#6#97#0#PHP" expanded="true" />
+                <marker date="1543904511206" expanded="true" signature="109:589" ph="..." />
+                <marker date="1543904511206" expanded="true" signature="635:1327" ph="..." />
+                <marker date="1543904511206" expanded="true" signature="2610:4800" ph="..." />
+                <marker date="1543904511206" expanded="true" signature="3694:4800" ph="..." />
+                <marker date="1543904511206" expanded="true" signature="5058:5219" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/site/php/login_manager.php">
+        <entry file="file://$PROJECT_DIR$/db/neo4j_comments.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="12" selection-start-line="12" selection-end-line="12" selection-end-column="43" />
+            <state>
+              <caret selection-end-line="4428" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/neo4j_follows.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="38" selection-end-line="4930" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/neo4j_likes.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="2272" column="12" selection-end-line="2460" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/neo4j_tweets.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="81">
+              <caret line="953" column="29" selection-end-line="986" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/site/feed.php">
+        <entry file="file://$PROJECT_DIR$/db/neo4j_master.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="51" lean-forward="true" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
+            <state relative-caret-position="441">
+              <caret line="13283" column="37" lean-forward="true" selection-start-line="13283" selection-start-column="37" selection-end-line="13283" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/site/register.php">
+        <entry file="file://$PROJECT_DIR$/db/neo4j_users.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/python/db_populator.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="53" selection-start-line="53" selection-end-line="68" selection-end-column="23" />
-              <folding>
-                <marker date="1543511994120" expanded="true" signature="109:589" ph="..." />
-                <marker date="1543511994120" expanded="true" signature="635:1327" ph="..." />
-                <marker date="1543511994120" expanded="true" signature="2376:2537" ph="..." />
-              </folding>
+            <state relative-caret-position="636">
+              <caret line="492" lean-forward="true" selection-end-line="492" />
             </state>
           </provider>
         </entry>
@@ -153,17 +162,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/python/nba_poller.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="161" lean-forward="true" selection-start-line="161" selection-end-line="161" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/site/php/register_manager.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+            <state relative-caret-position="276">
+              <caret line="112" column="22" selection-start-line="112" selection-start-column="22" selection-end-line="112" selection-end-column="22" />
+              <folding>
+                <marker date="1543902800501" expanded="true" signature="3053:3922" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -202,11 +205,14 @@
         <option value="$PROJECT_DIR$/site/assets/css/styles.css" />
         <option value="$PROJECT_DIR$/site/login.php" />
         <option value="$PROJECT_DIR$/site/register.php" />
-        <option value="$PROJECT_DIR$/python/db_populator.py" />
         <option value="$PROJECT_DIR$/python/neo4j_populator.py" />
         <option value="$PROJECT_DIR$/site/php/login_manager.php" />
         <option value="$PROJECT_DIR$/site/php/register_manager.php" />
+        <option value="$PROJECT_DIR$/site/php/comment_manager.php" />
         <option value="$PROJECT_DIR$/site/feed.php" />
+        <option value="$PROJECT_DIR$/python/nba_poller.py" />
+        <option value="$PROJECT_DIR$/python/db_populator.py" />
+        <option value="$PROJECT_DIR$/db/neo4j_master.txt" />
       </list>
     </option>
   </component>
@@ -237,12 +243,18 @@
             <path>
               <item name="TwitterClone" type="b2602c69:ProjectViewProjectNode" />
               <item name="TwitterClone" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TwitterClone" type="b2602c69:ProjectViewProjectNode" />
               <item name="TwitterClone" type="462c0819:PsiDirectoryNode" />
               <item name="python" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TwitterClone" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TwitterClone" type="462c0819:PsiDirectoryNode" />
+              <item name="python" type="462c0819:PsiDirectoryNode" />
+              <item name="csv" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TwitterClone" type="b2602c69:ProjectViewProjectNode" />
@@ -271,14 +283,14 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543528518645" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543905180785" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -321,18 +333,21 @@
       <workItem from="1542652866942" duration="8400000" />
       <workItem from="1542746760163" duration="4396000" />
       <workItem from="1543351319278" duration="4999000" />
-      <workItem from="1543506964537" duration="8120000" />
+      <workItem from="1543506964537" duration="10149000" />
+      <workItem from="1543797402619" duration="3808000" />
+      <workItem from="1543889433040" duration="1207000" />
+      <workItem from="1543900326754" duration="4177000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33769000" />
+    <option name="totallyTimeSpent" value="44990000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="797" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="797" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2639485" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2746781" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -341,7 +356,7 @@
       <window_info id="Learn" order="6" />
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32907802" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -428,67 +443,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1920">
           <caret line="5" column="123780" selection-start-line="5" selection-start-column="123780" selection-end-line="5" selection-end-column="123780" />
-          <folding>
-            <element signature="e#57526#57726#2" expanded="true" />
-            <element signature="e#57934#58083#2" expanded="true" />
-            <element signature="e#58585#58731#2" expanded="true" />
-            <element signature="e#59032#59198#1" expanded="true" />
-            <element signature="e#70814#71057#2" expanded="true" />
-            <element signature="e#71924#72173#2" expanded="true" />
-            <element signature="e#99236#99426#2" expanded="true" />
-            <element signature="e#99472#99662#2" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/er_diagram_png.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/db_populator.py">
+    <entry file="file://$PROJECT_DIR$/docs/er_diagram_png.png" />
+    <entry file="file://$PROJECT_DIR$/site/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="53" selection-start-line="53" selection-end-line="68" selection-end-column="23" />
-          <folding>
-            <marker date="1543511994120" expanded="true" signature="109:589" ph="..." />
-            <marker date="1543511994120" expanded="true" signature="635:1327" ph="..." />
-            <marker date="1543511994120" expanded="true" signature="2376:2537" ph="..." />
-          </folding>
+        <state relative-caret-position="360">
+          <caret line="29" column="52" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/neo4j_populator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="70" selection-start-line="14" selection-start-column="70" selection-end-line="14" selection-end-column="70" />
-          <folding>
-            <marker date="1543524699725" expanded="true" signature="520:525" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/nba_poller.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="161" lean-forward="true" selection-start-line="161" selection-end-line="161" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/site/php/login_manager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="12" selection-start-line="12" selection-end-line="12" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/site/php/register_manager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/er_diagram.png">
-      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/site/index.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -500,10 +464,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/site/login.php">
+    <entry file="file://$PROJECT_DIR$/site/php/login_manager.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="29" column="52" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
+        <state relative-caret-position="225">
+          <caret line="20" column="61" selection-start-line="20" selection-start-column="61" selection-end-line="20" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/feed.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1785">
+          <caret line="119" selection-start-line="119" selection-end-line="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/php/comment_manager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -514,10 +492,89 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/site/feed.php">
+    <entry file="file://$PROJECT_DIR$/site/php/register_manager.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="51" lean-forward="true" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
+        <state relative-caret-position="285">
+          <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/er_diagram.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/neo4j_populator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="70" selection-start-line="14" selection-start-column="70" selection-end-line="14" selection-end-column="70" />
+          <folding>
+            <marker date="1543524699725" expanded="true" signature="520:525" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/neo4j_users.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="636">
+          <caret line="492" lean-forward="true" selection-end-line="492" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/neo4j_tweets.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="953" column="29" selection-end-line="986" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/neo4j_likes.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="2272" column="12" selection-end-line="2460" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/nba_poller.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="112" column="22" selection-start-line="112" selection-start-column="22" selection-end-line="112" selection-end-column="22" />
+          <folding>
+            <marker date="1543902800501" expanded="true" signature="3053:3922" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/neo4j_follows.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="38" selection-end-line="4930" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/db_populator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="155" column="2" lean-forward="true" selection-start-line="155" selection-start-column="2" selection-end-line="155" selection-end-column="2" />
+          <folding>
+            <marker date="1543904511206" expanded="true" signature="109:589" ph="..." />
+            <marker date="1543904511206" expanded="true" signature="635:1327" ph="..." />
+            <marker date="1543904511206" expanded="true" signature="2610:4800" ph="..." />
+            <marker date="1543904511206" expanded="true" signature="3694:4800" ph="..." />
+            <marker date="1543904511206" expanded="true" signature="5058:5219" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/neo4j_comments.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="4428" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/neo4j_master.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="13283" column="37" lean-forward="true" selection-start-line="13283" selection-start-column="37" selection-end-line="13283" selection-end-column="37" />
         </state>
       </provider>
     </entry>

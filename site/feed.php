@@ -72,18 +72,30 @@
         <?php echo file_get_contents('common/header.html'); ?>
     </head>
     <body class="bg-light">
-        <?php $currentPage = "feed"; include('common/nav.php'); ?>
         <div class="container">
+
+            <?php $currentPage = "feed"; include('common/nav.php'); ?>
+            <?php if ($error = $_GET['error']) { ?>
+                <?php if ($error) { ?>
+                    <div class="alert alert-success" ?>
+
+                    </div>
+                <?php } else { ?>
+                    <div class="alert alert-danger" ?>
+
+                    </div>
+                <?php } ?>
+            <?php } ?>
+
             <h1>Feed</h1>
             <br>
             <?php foreach ($tweets as $tweet) { ?>
-
                 <div class="border border-secondary rounded bg-white feed-div shadow">
                     <h2><?php echo $tweet['fname'] . ' ' . $tweet['lname']; ?></h2>
                     <p><?php echo $tweet['text']; ?></p>
                     <hr>
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col">
                             <button type="button" class="btn btn-primary"><?php echo $likes[$tweet['tweet_id']]; ?> Likes</button>
                             <button type="button" class="btn btn-secondary"><?php echo count($comments[$tweet['tweet_id']]); ?> Comments</button>
                         </div>
@@ -97,16 +109,28 @@
                             <p><?php echo $tweet_comment['text'] ?></p>
                         </div>
                     <?php } ?>
+
                     <br>
                     <form method="post" action="php/comment_manager.php">
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="inputComment" aria-describedby="commentHelp" placeholder="Enter a comment...">
+                        <div class="form-row">
+                            <div class="col-11">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="inputComment" aria-describedby="commentHelp" placeholder="Enter a comment...">
+                                </div>
+
+                            </div>
+                            <div class="col">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
-                </div>
+
+                 </div>
+
                 <br>
             <?php } ?>
+
         </div>
     </body>
 </html>

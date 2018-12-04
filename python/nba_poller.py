@@ -75,6 +75,39 @@ def form_teams_dict(team_reader):
     return teams
 
 
+def graph_transfer(file, reader, teams):
+    for row in reader:
+        graph_writer(file, row, teams)
+
+
+def graph_writer(file, row, teams):
+    # get necessary information
+    id = 'u' + row['id']
+    fname = row['fname']
+    fname = fname.replace('\'', '')
+    lname = row['lname']
+    lname = lname.replace('\'', '')
+    team_id = str(row['teamId'])
+    team = teams[team_id]
+
+    jersey = row['jersey']
+    position = row['position']
+    height = row['height']
+    password = 'password'
+    yob = int(row['yob'])
+
+    # form the email
+    variation = False
+    email = fname.lower() + '_' + lname.lower() + '@gmail.com'
+    username = fname + lname + str(jersey)
+
+    bio = "Hi, my name is " + fname + " " + lname + ". I play for the " + team + " in the " + position + " position."
+    print(bio)
+
+    write_str = "CREATE (%s:User { fname: '%s', lname: '%s', email: '%s', password: '%s', yob: %d, date_created: '%s' })\n" % (id, fname, lname, email, password, yob, "12022018")
+    file.write(write_str)
+
+
 ### iterate through the data and write to db
 def database_transfer(db, cursor, reader, teams):
     for row in reader:
@@ -148,14 +181,22 @@ def main():
     file.close()
 
 
+    neo_file = open('../db/neo4j_users.txt', 'w')
+
+
     ### transfer the players to the database
-    db = pymysql.connect("localhost", "root", "britton11", "TwitterClone")
-    cursor = db.cursor()
+    #db = pymysql.connect("localhost", "root", "britton11", "TwitterClone")
+    #cursor = db.cursor()
     csvfile = open('csv/players.csv', 'r')
     reader = csv.DictReader(csvfile)
-    database_transfer(db, cursor, reader, teams)
-    db.close()
+    #database_transfer(db, cursor, reader, teams)
+    #db.close()
+
+    graph_transfer(neo_file, reader, teams)
+
+
     csvfile.close()
+    neo_file.close()
 
 
 main()
